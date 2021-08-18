@@ -41,6 +41,12 @@ class App extends Component {
     return (
       <div id="main">
         {/* Do not remove the main div */}
+       <ol>
+          {this.cityList.filter( (city)=>city.country=='India').map( (city,index)=>{
+            const key = `location${index + 1}`
+            return <li key={key}>{city.name}</li>;
+          })}
+        </ol>
       </div>
     )
   }
